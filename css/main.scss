@@ -1,5 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+@import 'vars';
+
 
 * {
     margin: 0;
@@ -10,20 +12,22 @@ body {
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
 
 /* Typography */
 
 h1 {
     font-size: 2.5rem;
-    letter-spacing: 1rem;
+    letter-spacing: .8rem;
     text-transform: uppercase;
     padding-bottom: 20px;
-
+    color: color(neutral-darkred);
 }
 
 .highlight {
     font-weight: 300;
+    color: color(primary-red);
 }
 
 
@@ -32,6 +36,7 @@ p {
     line-height: 1.2rem;
     text-align: center;
     padding-bottom: 40px;
+    color: color(primary-red);
 }
 
 /* header */
@@ -57,36 +62,83 @@ header {
 
 /* content */
 
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .main-content {
-    padding: 65px 40px 10px;
+    padding: 65px 0px 0;
+    max-width: 300px;
+    align-self: center;
     text-align: center;
 }
 
     /* form */
 
     .email-form {
-        width: 375px;
+        width: 80%;
+        max-width: 300px;
+        align-self: center;
+        display: flex;
+        justify-content: center;
         position: relative;
         text-align: center;
         padding-bottom: 90px;
 
         .email-input {
             padding: 15px 25px;
-            border: 1px solid #000;
+            border: 1px solid color(primary-red);
             border-radius: 25px;
-            width: 70%;
-            margin: 0 auto;
+            width: 100%;
             font-family: 'Josefin Sans', sans-serif;
-            font-size: .8rem;
+            font-size: 12px;
+            color: color(primary-red);
+            background: none;
         }
 
         .email-submit {
+            cursor: pointer;
             position: absolute;
-            padding: 15px 25px;
-            border: 1px solid #000;
+            padding: 11px 30px;
+            border: none;
+            background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
             border-radius: 25px;
             z-index: 2;
-            right: 30px;
+            right: 0px;
+            top: 0px;
+           
+        }
 
+        .email-submit:hover {
+            background: linear-gradient(135deg, hsl(0, 80%, 90%), hsl(0, 80%, 86%));
+            box-shadow: 0 10px 10px color(primary-red);
+        }
+
+        .error {
+            border: 2px solid color(primary-softred);
+            padding: 14px 25px;
+        }
+
+        .error-icon {
+            position: absolute;
+            padding: 11px 90px;
+            right: 0px;
+            top: 0px;
+            visibility: hidden;
+        }
+
+        .error-msg {
+            position: absolute;
+            top: 55px;
+            left: 25px;
+            font-size: 12px;
+            color: color(primary-softred);
+            visibility: hidden;
+        }
+
+        .show {
+            visibility: visible;
         }
     }
