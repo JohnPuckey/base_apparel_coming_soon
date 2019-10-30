@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+
+}
+
+.highlight {
+    font-weight: 300;
+}
+
+
+p {
+    font-size: .85rem;
+    line-height: 1.2rem;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+/* header */
+
+header {
+    padding: 30px ;
+
+    .logo {
+        width: 100px;
+        height: 100%;
+    }
+}
+
+/* main image */
+
+.main-image {
+
+    img {
+    width: 100%;
+    height: 100%;
+    }    
+}
+
+/* content */
+
+.main-content {
+    padding: 65px 40px 10px;
+    text-align: center;
+}
+
+    /* form */
+
+    .email-form {
+        width: 375px;
+        position: relative;
+        text-align: center;
+        padding-bottom: 90px;
+
+        .email-input {
+            padding: 15px 25px;
+            border: 1px solid #000;
+            border-radius: 25px;
+            width: 70%;
+            margin: 0 auto;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: .8rem;
+        }
+
+        .email-submit {
+            position: absolute;
+            padding: 15px 25px;
+            border: 1px solid #000;
+            border-radius: 25px;
+            z-index: 2;
+            right: 30px;
+
+        }
+    }
