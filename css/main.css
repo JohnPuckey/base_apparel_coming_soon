@@ -5,6 +5,7 @@
 }
 
 body {
+  height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
@@ -41,13 +42,11 @@ header {
 
 header .logo {
   width: 100px;
-  height: 100%;
 }
 
 /* main image */
 .main-image img {
   width: 100%;
-  height: 100%;
 }
 
 /* content */
@@ -117,6 +116,8 @@ header .logo {
   background: linear-gradient(135deg, #fad1d1, #f8bfbf);
   -webkit-box-shadow: 0 10px 10px #ce9797;
           box-shadow: 0 10px 10px #ce9797;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
 }
 
 .email-form .error {
@@ -143,5 +144,168 @@ header .logo {
 
 .email-form .show {
   visibility: visible;
+}
+
+footer {
+  height: 20px;
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+footer .attribution a {
+  color: #3e52a3;
+}
+
+/* Tablets */
+/* desktops and laptops */
+@media screen and (min-width: 992px) {
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(55%, 1fr) minmax(300px, 610px);
+        grid-template-columns: minmax(55%, 1fr) minmax(300px, 610px);
+    -ms-grid-rows: 164px auto 20px;
+        grid-template-rows: 164px auto 20px;
+  }
+  .bg-image {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / 4;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  header {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    padding: 65px 100px 0;
+  }
+  header .logo {
+    width: 160px;
+  }
+  .main-image {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / 4;
+  }
+  .content {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .content .main-content {
+    text-align: left;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding-top: 0;
+    padding-left: 100px;
+    max-width: 380px;
+  }
+  .content .main-content p {
+    text-align: left;
+    line-height: 1.7rem;
+  }
+  .email-form {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 100px;
+    max-width: 380px;
+  }
+  footer {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  footer .attribution {
+    padding-left: 100px;
+    text-align: left;
+  }
+}
+
+/* large screens */
+@media screen and (min-width: 1200px) {
+  header {
+    padding: 65px 160px 0;
+  }
+  header .logo {
+    width: 160px;
+  }
+  .content .main-content {
+    padding-top: 70px;
+    padding-left: 160px;
+    max-width: 450px;
+  }
+  .content .main-content h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 4.2rem;
+    padding-bottom: 25px;
+  }
+  .content .main-content p {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.7rem;
+  }
+  .email-form {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 160px;
+    max-width: 445px;
+    padding-bottom: 0px;
+  }
+  .email-form .email-input {
+    padding: 20px 30px;
+    border-radius: 30px;
+    width: 100%;
+    font-size: 16px;
+  }
+  .email-form .email-submit {
+    padding: 18px 40px;
+    border-radius: 30px;
+  }
+  .email-form .error {
+    padding: 19px 30px;
+  }
+  .email-form .error-icon {
+    position: absolute;
+    padding: 16px 110px;
+    right: 0px;
+    top: 0px;
+    visibility: hidden;
+  }
+  .email-form .error-msg {
+    position: absolute;
+    top: 65px;
+    left: 30px;
+    font-size: 13px;
+    color: #f96262;
+    visibility: hidden;
+  }
+  footer .attribution {
+    padding-left: 160px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
