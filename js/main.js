@@ -27,10 +27,10 @@ function Validate() {
 
     if (emailIsValid(email.value)) {
         error.innerHTML = ""
-        errorIcon.style.visibility = "hidden" // make icon visible
-        document.getElementById("email").classList.remove("error") // add error clas to email input
-
+        errorIcon.style.visibility = "hidden" // hide icon
+        document.getElementById("email").classList.remove("error") // remove error clas from email input
         //return true
+        email.value = "" // clear email input
 
     } else {
 
