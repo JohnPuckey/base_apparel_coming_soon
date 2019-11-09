@@ -26,8 +26,11 @@ function Validate() {
     // if email is valid test submit form
 
     if (emailIsValid(email.value)) {
-        error.innerHTML = "ok"
-        return true
+        error.innerHTML = ""
+        errorIcon.style.visibility = "hidden" // make icon visible
+        document.getElementById("email").classList.remove("error") // add error clas to email input
+
+        //return true
 
     } else {
 
