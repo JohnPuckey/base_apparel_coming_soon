@@ -4,6 +4,13 @@
   padding: 0;
 }
 
+textarea,
+select,
+input,
+button {
+  outline: none;
+}
+
 body {
   height: 100vh;
   -webkit-box-sizing: border-box;
@@ -44,12 +51,12 @@ header .logo {
   width: 100px;
 }
 
-/* main image */
+/* main image section*/
 .main-image img {
   width: 100%;
 }
 
-/* content */
+/* content section */
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,22 +93,21 @@ header .logo {
           justify-content: center;
   position: relative;
   text-align: center;
-  padding-bottom: 90px;
 }
 
-.email-form .email-input {
+.email-form .email {
   padding: 15px 25px;
   border: 1px solid #ce9797;
   border-radius: 25px;
   width: 100%;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 12px;
+  line-height: 0em;
   color: #ce9797;
   background: none;
 }
 
-.email-form .email-submit {
-  cursor: pointer;
+.email-form #submit-btn {
   position: absolute;
   padding: 11px 30px;
   border: none;
@@ -112,12 +118,12 @@ header .logo {
   top: 0px;
 }
 
-.email-form .email-submit:hover {
+.email-form #submit-btn:hover {
   background: linear-gradient(135deg, #fad1d1, #f8bfbf);
   -webkit-box-shadow: 0 10px 10px #ce9797;
           box-shadow: 0 10px 10px #ce9797;
-  -webkit-transition: .2s ease;
-  transition: .2s ease;
+  -webkit-transition: .1s ease;
+  transition: .1s ease;
 }
 
 .email-form .error {
@@ -125,28 +131,25 @@ header .logo {
   padding: 14px 25px;
 }
 
-.email-form .error-icon {
+.email-form #error-icon {
   position: absolute;
-  padding: 11px 90px;
+  padding: 10px 90px;
   right: 0px;
   top: 0px;
   visibility: hidden;
 }
 
-.email-form .error-msg {
+.email-form #error-msg {
   position: absolute;
   top: 55px;
   left: 25px;
   font-size: 12px;
   color: #f96262;
-  visibility: hidden;
 }
 
-.email-form .show {
-  visibility: visible;
-}
-
+/* Footer */
 footer {
+  padding-top: 90px;
   height: 20px;
 }
 
@@ -159,6 +162,7 @@ footer .attribution a {
   color: #3e52a3;
 }
 
+/* Media Queries */
 /* Tablets */
 /* desktops and laptops */
 @media screen and (min-width: 992px) {
@@ -238,6 +242,7 @@ footer .attribution a {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3 / 4;
+    padding-top: 0;
   }
   footer .attribution {
     padding-left: 100px;
@@ -276,33 +281,35 @@ footer .attribution a {
     max-width: 445px;
     padding-bottom: 0px;
   }
-  .email-form .email-input {
+  .email-form .email {
     padding: 20px 30px;
     border-radius: 30px;
     width: 100%;
     font-size: 16px;
   }
-  .email-form .email-submit {
-    padding: 18px 40px;
-    border-radius: 30px;
-  }
   .email-form .error {
     padding: 19px 30px;
   }
-  .email-form .error-icon {
+  .email-form #submit-btn {
+    padding: 18px 40px;
+    border-radius: 30px;
+  }
+  .email-form #error-icon {
     position: absolute;
     padding: 16px 110px;
     right: 0px;
     top: 0px;
     visibility: hidden;
   }
-  .email-form .error-msg {
+  .email-form #error-msg {
     position: absolute;
-    top: 65px;
+    top: 70px;
     left: 30px;
     font-size: 13px;
     color: #f96262;
-    visibility: hidden;
+  }
+  footer {
+    padding-top: 0;
   }
   footer .attribution {
     padding-left: 160px;

@@ -35,26 +35,26 @@
 
       </div>
 
-      <form class="email-form">
-        <input class="email-input" type="email" value="Email Address">
-        <button class="email-submit" type="submit">
-          <img src="images/icon-arrow.svg" alt="">
-        </button>
-        <img class="error-icon" src="images/icon-error.svg" alt="">
-        <p class="error-msg">Please provide a valid email</p>
+      <form class="email-form" action="#" name="emailForm" method="POST" onsubmit="return(Validate())">
+        <input id="email" class="email" type="text" name="email" placeholder="Email Address">
+        <button id="submit-btn">
+          <img src="images/icon-arrow.svg" alt="submit button">
+        </button type="submit">
+        <img id="error-icon" src="images/icon-error.svg" alt="">
+        <p id="error-msg"></p>
       </form>
 
     </div>
 
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/JohnPuckey/base_apparel_coming_soon">John Puckey</a>.
-    </p>
-  </footer>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/JohnPuckey/base_apparel_coming_soon">John Puckey</a>.
+      </p>
+    </footer>
 
-</div>  
+  </div>
 
 
 
@@ -62,5 +62,7 @@
   <script src="js/main.js"></script>
 
 </body>
+
+
 
 </html>
